@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet&subset=latin-ext');
+body{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background: url('dark-honeycomb.png');
+}
+.food{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+}
+.board{
+    position: relative;
+    border: 5px solid #000;
+    height: 570px;
+    width: 570px;
+    box-shadow: 0 0 20px 0 #000;
+    border-radius: 5px;
+}
+.snake_element{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(214, 204, 21);
+    position: absolute;
+    z-index: 3;
+}
+.snake_head{
+    background-color: rgb(186, 177, 16);
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 4;
+}
+.board_element{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.board_element:nth-child(even){
+    background-color: rgb(16, 99, 31);
+}
+.board_element:nth-child(odd){
+    background-color: rgb(39, 229, 73);
+}
+.board_element.game_over{
+    background-color: rgb(66, 134, 244);
+    z-index: 10;
+}
+.board_element.game_over2{
+    background-color: rgb(219, 183, 26);
+    z-index: 8;
+}
+.board__curtain{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    z-index: 100;
+}
+.board__curtain:after{
+    content: "";
+    display: block;
+    height: 0;
+    width: 100%;
+    background-image: url("curtain.png");
+    background-size: 100% 100%;
+    transition: 5s linear;
+    z-index: 10;
+    position: absolute;
+}
+.board__curtain.active:after{
+    height: 100%;
+}
+.restart_button{
+    z-index: 9;
+    position: absolute;
+    height: 70px;
+    width: 200px;
+    background-color: red;
+    left: 185px;
+    top: 250px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Sniglet, cursive;
+}
+.scoreboard{
+    position: relative;
+    height: 500px;
+    width: calc((50vw - 290px)*0.75);
+    background-color: dodgerblue;
+    border: 5px solid #000;
+    box-shadow: 0 0 20px 0 #000;
+}
+.scoreboard header{
+    border-bottom: 5px solid #000;
+    text-align: center;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 40px;
+    font-family: Sniglet, cursive;
+    font-size: 25px;
+}
+
+.countdown{
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: calc(50% - 100px);
+    top: calc(50vh - 100px);
+    color: red;
+    font-weight: bold;
+    font-size: 100px;
+    z-index: 6;
+    margin: 0;
+    text-shadow: 2px 2px #fff;
+}
