@@ -65,6 +65,8 @@ function gameOver(){
 }
 
 function changeDirection(evt){
+    if(parseInt(readCookie("motionDone")) === 0)
+        return 0;
     if(evt.key === 'ArrowUp' && direction !== 3){
         direction = 1;
     }
@@ -77,6 +79,7 @@ function changeDirection(evt){
     if(evt.key === 'ArrowLeft' && direction !== 2){
         direction = 4;
     }
+    setCookie("motionDone", 0);
 }
 
 function placeFood(board_arr){
@@ -210,6 +213,7 @@ function motion(speed, board_arr){
                 updateScore(parseInt(readCookie("score"))+1);
             }
         }
+        setCookie("motionDone", 1);
     }, 300);
 }
 
