@@ -24,7 +24,7 @@ function readCookie(name){
 
 function updateScore(score){
     setCookie("score", score);
-    document.querySelector(".scoreboard__score span").innerText = score;
+    document.querySelector(".score").innerText = score;
 }
 
 function coverBoard(color){
@@ -87,6 +87,10 @@ function placeFood(board_arr){
     let max_verticaly = board_height/snake_elements[0].clientWidth;
     let horizontaly = parseInt(Math.random()*max_horizontaly);
     let verticaly = parseInt(Math.random()*max_verticaly);
+    while(board_arr[horizontaly][verticaly] === 'snake'){
+        horizontaly = parseInt(Math.random()*max_horizontaly);
+        verticaly = parseInt(Math.random()*max_verticaly);
+    }
     board_arr[horizontaly][verticaly] = 'food';
     let food = document.querySelector('.food');
     food.style.marginLeft = horizontaly*30 + 'px';
@@ -206,6 +210,7 @@ function motion(speed, board_arr){
                 updateScore(parseInt(readCookie("score"))+1);
             }
         }
+        console.log(board_arr);
     }, 300);
 }
 
