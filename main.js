@@ -210,7 +210,6 @@ function motion(speed, board_arr){
                 updateScore(parseInt(readCookie("score"))+1);
             }
         }
-        console.log(board_arr);
     }, 300);
 }
 
