@@ -52,7 +52,7 @@ function uncoverBoard(){
 }
 
 function restart(){
-    document.querySelector(".restart_button").removeEventListener('click', init);
+    document.querySelector(".restart_button").removeEventListener('click', restart);
     uncoverBoard();
     clearBoard();
     direction = 2;
