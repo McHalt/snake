@@ -225,7 +225,7 @@ function motion(speed, board_arr){
     }, 300);
 }
 
-function init(){
+function startGame(){
     let board_arr = generateBoard();
     placeFood(board_arr);
     let cd_seconds = 5;
@@ -234,6 +234,11 @@ function init(){
         motion(300, board_arr);
     }, cd_seconds*1000);
     setCookie("score", 0);
+    unhide(document.querySelector(".score"));
+}
+
+function init(){
+    hide(document.querySelector(".score"));
 }
 
 init();
