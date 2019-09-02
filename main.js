@@ -2,6 +2,14 @@
 
 let direction = 2;
 
+function hide(element){
+    element.style.visibility = "hidden";
+}
+
+function unhide(element){
+    element.style.visibility = "visible";
+}
+
 function setCookie(name, value, seconds=null) {
     let date = new Date();
     let expires = "";
