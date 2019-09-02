@@ -57,7 +57,7 @@ function restart(){
     clearBoard();
     direction = 2;
     updateScore(0);
-    setTimeout(init, 6000);
+    setTimeout(startGame, 6000);
 }
 
 function gameOver(){
