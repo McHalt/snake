@@ -112,3 +112,21 @@ body{
     margin: 0;
     text-shadow: 2px 2px #fff;
 }
+.score{
+    min-width: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    font-family: Sniglet, cursive;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: -5px 5px 10px #000;
+    right: 0;
+    color: antiquewhite;
+    padding: 0 10px;
+    text-shadow: 2px 2px #000;
+}
