@@ -226,6 +226,7 @@ function motion(speed, board_arr){
 }
 
 function startGame(){
+    hide(document.querySelector(".menu"));
     let board_arr = generateBoard();
     placeFood(board_arr);
     let cd_seconds = 5;
@@ -238,6 +239,7 @@ function startGame(){
 }
 
 function init(){
+    document.querySelectorAll(".menu__button")[0].addEventListener('click', startGame);
     hide(document.querySelector(".score"));
 }
 

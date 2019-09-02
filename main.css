@@ -130,3 +130,43 @@ body{
     padding: 0 10px;
     text-shadow: 2px 2px #000;
 }
+
+.menu{
+    position: absolute;
+    border: 5px solid #000;
+    height: 570px;
+    width: 570px;
+    box-shadow: 0 0 20px 0 #000;
+    border-radius: 5px;
+    z-index: 101;
+    background: url("menu-background.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__button{
+    height: 80px;
+    width: 180px;
+    background-color: orange;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Play, cursive;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu__credits{
+    position: absolute;
+    bottom: 0;
+    font-family: Play, cursive;
+    font-size: 13px;
+}
+
+.menu__credits__link{
+    text-decoration: none;
+    color: black;
+}
